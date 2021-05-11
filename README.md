@@ -1,9 +1,9 @@
-#Setup
+# Setup
 
 - DDD com Symfony Kernel + Symfony Bundles
 - PHP8, Nginx com Php-fpm
 
-#####Requesitos: 
+##### Requesitos: 
 - Docker
 - Docker Compose
 - Bash
@@ -11,7 +11,7 @@
 
 ---
 
-####Rodar os seguintes comandos, para iniciar o projeto:
+#### Rodar os seguintes comandos, para iniciar o projeto:
     
 1) ``make build``  - esse comando constrói os containers do Docker
 2) ``make install`` - esse comando instala dependências, executa migrate e data fixture
@@ -22,14 +22,14 @@
 
 ---
 
-###Rotas:
+### Rotas:
 
 1) ``http://localhost/api/v1/email`` - Parâmetros multipart [name, email, phone, message, file_attach]
-2) ``http://localhost/api/v1/email/{\w+}`` - Recupera dados da tabela buscando o "email"
+2) ``http://localhost/api/v1/email/{\d+}`` - Recupera dados da tabela buscando o "id"
 
 ---
 
-###Uso real
+### Uso real
 
 Para simular o envio de e-mail, saida e visualização de fato, foi utilizado o ``mailhog``
 para testar, só acessar ``http://localhost:8025``, e assim vai ser possível ver o email que foi enviado
