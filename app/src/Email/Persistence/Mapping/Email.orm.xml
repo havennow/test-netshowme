@@ -1,0 +1,17 @@
+<doctrine-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="App\Email\Domain\Entity\Email" table="Email">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="name" column="name" type="string" length="256"/>
+        <field name="email" column="email" type="string" length="256"/>
+        <field name="phone" column="phone" type="string" length="256"/>
+        <field name="message" column="message" type="text"/>
+        <field name="file_attach" column="file_attach" type="string" length="256"/>
+        <field name="ip" column="ip" type="string" length="256"/>
+        <field name="create_at" column="create_at" type="datetime"/>
+    </entity>
+</doctrine-mapping>

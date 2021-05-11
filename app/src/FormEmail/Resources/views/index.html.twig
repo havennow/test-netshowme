@@ -1,0 +1,36 @@
+{% extends "FormEmail/Resources/views/base.html.twig" %}
+{% block body %}
+    <div class="container">
+        <div class="email mt-5">
+            <form id="sendFormEmail" enctype="multipart/form-data" action="{{ path('email_create') }}" method="post">
+                <div class="form-group mt-1">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nome...">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail...">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="phone">Telefone</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefone...">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" class="md-textarea form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="file_attach">Arquivo Anexo</label>
+                    <input type="file" id="file_attach" name="file_attach"/>
+                </div>
+                <div class="form-group mt-1">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('sendFormEmail') }}
+{% endblock %}

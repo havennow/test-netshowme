@@ -1,0 +1,14 @@
+email_create:
+  path: /api/v1/email
+  controller: App\Email\Http\Controller\CreateAction
+  methods: POST
+
+email_search_unique:
+  path: /api/v1/email/{id}
+  controller: App\Email\Http\Controller\SearchUniqueAction
+  methods: GET
+
+form_email:
+  path: /
+  controller: App\FormEmail\Http\Controller\ListAction
+  methods: GET
